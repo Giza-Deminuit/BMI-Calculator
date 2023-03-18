@@ -10,6 +10,13 @@
     let heightInches = Number(formInput.elements[1].value);
     let weight = Number(formInput.elements[2].value);
 
+    // Ensure input is valid
+    if (heightFeet < 0 || heightInches < 0 || weight <= 0) {
+      document.getElementById("ErrorOutputID").innerHTML = "<strong>Invalid Input - Please try again</strong>";
+      document.getElementById("BMIoutputID").innerHTML = "";
+      document.getElementById("CategoryOutputID").innerHTML = "";
+    }
+    else {
     // Call function to perform calculation
     let BMI = calculateBMI(heightFeet, heightInches, weight);
 
@@ -17,6 +24,8 @@
     let category = findCategory(BMI);
 
     // Display output
+    document.getElementById("ErrorOutputID").innerHTML = "";
     document.getElementById("BMIoutputID").innerHTML = "<strong>Your BMI: </strong>" + BMI;
     document.getElementById("CategoryOutputID").innerHTML = "<strong>Category: </strong>" + category;
+    }
   }

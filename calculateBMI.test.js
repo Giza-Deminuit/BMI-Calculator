@@ -1,5 +1,5 @@
 const cBMI = require('./calculateBMI.js');
 
-test('correctly calculates the BMI of the user based on their input', () => {
-    expect(cBMI(5, 2, 145)).toBeGreaterThan(0);
+test('The result of the calculation should be a positive value', () => {
+    expect(cBMI(.1, .1, .1)).toBeGreaterThan(0);
 });
