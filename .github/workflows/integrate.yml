@@ -18,4 +18,4 @@ jobs:
   prettier_check:
     runs-on: windows-latest
     steps:
-      - run: npx prettier --check . # Checks if the files are stylistically correct
+      - run: npx prettier --check . # Checks if the files are stylistically correct 
