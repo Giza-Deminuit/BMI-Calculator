@@ -21,4 +21,5 @@ jobs:
       - uses: actions/setup-node@v1 # Sets up Node
         with:
           node-version: 16 # GitHub Actions currently uses Node16
+      - run: npx prettier --write . # Checks if the files are stylistically correct 
       - run: npx prettier --check . # Checks if the files are stylistically correct 
