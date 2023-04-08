@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
 
     <title>BMI Calculator</title>
-    </head>
-    <body>
-        <h1>BMI Calculator</h1>
+  </head>
+  <body>
+    <h1>BMI Calculator</h1>
 
-      <p>Please input your height in feet and inches and your weight in pounds below.</p>
+    <p>
+      Please input your height in feet and inches and your weight in pounds
+      below.
+    </p>
 
-      <form id="formID">
-        <h3>Enter Height:</h3>
-        <label for="heightFeet">&nbsp&nbsp&nbsp&nbspFeet:</label>
-        <input type="text" id="heightFeet" heightFeet="heightFeet">
+    <form id="formID">
+      <h3>Enter Height:</h3>
+      <label for="heightFeet">&nbsp&nbsp&nbsp&nbspFeet:</label>
+      <input type="text" id="heightFeet" heightFeet="heightFeet" />
 
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 
-        <label for="heightInches">Inches:</label>
-        <input type="text" id="heightInches" heightInches="heightInches">
-        <br><br><br>
-      
-        <h3>Enter Weight (pounds):</h3>
-        <label for="weight">Weight:</label>
-        <input type="text" id="weight" weight="weight">
-      </form>
+      <label for="heightInches">Inches:</label>
+      <input type="text" id="heightInches" heightInches="heightInches" />
+      <br /><br /><br />
 
-      <br>
-      <button onclick="getData()">Calculate BMI</button>
+      <h3>Enter Weight (pounds):</h3>
+      <label for="weight">Weight:</label>
+      <input type="text" id="weight" weight="weight" />
+    </form>
 
-      <p id="ErrorOutputID"></p>
-      <p id="BMIoutputID"></p>
-      <p id="CategoryOutputID"></p>
-    </body>
+    <br />
+    <button onclick="getData()">Calculate BMI</button>
 
-    <!--Pull the scripts-->
-    <script src="findCategory.js"></script>
-    <script src="calculateBMI.js"></script>
-    <script src="getData.js"></script>
+    <p id="ErrorOutputID"></p>
+    <p id="BMIoutputID"></p>
+    <p id="CategoryOutputID"></p>
+  </body>
+
+  <!--Pull the scripts-->
+  <script src="findCategory.js"></script>
+  <script src="calculateBMI.js"></script>
+  <script src="getData.js"></script>
 </html>
