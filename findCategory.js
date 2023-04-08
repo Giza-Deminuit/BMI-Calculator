@@ -1,5 +1,5 @@
   /**********************************************************************  
-  This function uses the BMI calculate in calculateBMI to determine
+  This function uses the BMI calculated in calculateBMI to determine
   the correct category of weight and returns it to getData().
   ***********************************************************************/
 function findCategory(BMI) {
