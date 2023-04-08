@@ -13,7 +13,6 @@ jobs:
         with:
           node-version: 16 # GitHub Actions currently uses Node16
       - run: npm ci # Ensures updated dependencies
-      - run: npx prettier --check . # Checks if the files are stylistically correct
       - run: npm run test # Runs the script '"test": "jest"' in package.json, which executes the tests
   prettier_check:
     runs-on: windows-latest
