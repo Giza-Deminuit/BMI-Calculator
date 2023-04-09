@@ -10,10 +10,10 @@ function findCategory(BMI) {
   if (BMI >= 18.5 && BMI <= 24.9) {
     return "Normal weight";
   } // Note: boundary shift induced. Should be (BMI >= 18.5...).
-  if (BMI >= 25 && BMI <= 29.9) {
+  if (BMI > 24.9 && BMI <= 29.9) {
     return "Overweight";
   }
-  if (BMI >= 30) {
+  if (BMI > 29.9) {
     return "Obese";
   }
   return "Invalid";
