@@ -26,8 +26,8 @@ jobs:
       - run: npm run test && get-content coverage/lcov.info | node_modules\coveralls\bin\coveralls.js
       - name: npm install, make test-coverage
         run: |
-         run: npm ci 
-         run: npm run test
+         npm ci 
+         npm run test
       - name: Coveralls GitHub Action
         uses: coverallsapp/github-action@v2.0.0
     
