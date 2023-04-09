@@ -12,22 +12,16 @@ jobs:
       - uses: actions/setup-node@v1 # Sets up Node
         with:
           node-version: 16 # GitHub Actions currently uses Node16
-      - run: npm ci # Ensures updated dependencies
-      - run: npm run test # Runs the script '"test": "jest"' in package.json, which executes the tests
+      - name: npm ci, run tests
+        run: | 
+         npm ci 
+         npm run test && get-content coverage/lcov.info | node_modules\coveralls\bin\coveralls.js
+      - name: Coveralls GitHub Action
+        uses: coverallsapp/github-action@v2.0.0
+
   prettier_check:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2 # Checks out GitHub repo using version 2 of "actions"
-      - uses: actions/setup-node@v1 # Sets up Node
-        with:
-          node-version: 16 # GitHub Actions currently uses Node16
-     # - run: npx prettier --check . # Checks if the files are stylistically correct
-     # - run: jest --coverage && coveralls < coverage/lcov.info
-      - run: npm run test && get-content coverage/lcov.info | node_modules\coveralls\bin\coveralls.js
-      - name: npm install, make test-coverage
-        run: |
-         npm ci 
-         npm run test
-      - name: Coveralls GitHub Action
-        uses: coverallsapp/github-action@v2.0.0
+     - name: Check style
+       run: npx prettier --check . # Checks if the files are stylistically correct
     
