@@ -48,7 +48,7 @@ jobs:
         parallel: true
 
   finish:
-    needs: test
+    needs: tests_pull_request
     if: ${{ always() }}
     runs-on: ubuntu-latest
     steps:
