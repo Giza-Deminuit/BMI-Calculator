@@ -22,8 +22,7 @@ jobs:
         with:
           node-version: 16 # GitHub Actions currently uses Node16
       - run: npx prettier --check . # Checks if the files are stylistically correct
-  build:
-    name: Build
+  coveralls:
     runs-on: windows-latest
     steps:
        run: jest --coverage && coveralls < coverage/lcov.info
