@@ -21,20 +21,16 @@ jobs:
       - uses: actions/setup-node@v1 # Sets up Node
         with:
           node-version: 16 # GitHub Actions currently uses Node16
-      - run: npx prettier --check . # Checks if the files are stylistically correct
-  coveralls:
-    runs-on: windows-latest
-    steps:
-       run: jest --coverage && coveralls < coverage/lcov.info
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1 # Sets up Node
-      with:
+     # - run: npx prettier --check . # Checks if the files are stylistically correct
+      - run: jest --coverage && coveralls < coverage/lcov.info
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1 # Sets up Node
+        with:
         node-version: 16
-
-    - name: npm install, make test-coverage
-      run: |
+      - name: npm install, make test-coverage
+      - run: |
         npm install
         make test-coverage
 
-    - name: Coveralls
-      uses: coverallsapp/github-action@v1 
+      - name: Coveralls
+      - uses: coverallsapp/github-action@v1 
