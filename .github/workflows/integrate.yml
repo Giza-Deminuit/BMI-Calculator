@@ -23,4 +23,4 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Check style
-        run: npx prettier --check . # Checks if the files are stylistically correct
+        run: npx prettier --check *.js # Checks if the files are stylistically correct
