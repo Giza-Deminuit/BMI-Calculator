@@ -37,4 +37,4 @@ jobs:
         make test-coverage
 
     - name: Coveralls
-      uses: coverallsapp/github-action@v1
+      uses: coverallsapp/github-action@v1 
