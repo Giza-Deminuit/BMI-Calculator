@@ -22,7 +22,8 @@ jobs:
         with:
           node-version: 16 # GitHub Actions currently uses Node16
      # - run: npx prettier --check . # Checks if the files are stylistically correct
-      - run: jest --coverage && coveralls < coverage/lcov.info
+     # - run: jest --coverage && coveralls < coverage/lcov.info
+      - run: jest --coverage && Get-Content coverage/lcov.info | coveralls
       - name: npm install, make test-coverage
         run: |
          npm install
